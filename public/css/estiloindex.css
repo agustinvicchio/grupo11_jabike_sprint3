@@ -241,7 +241,7 @@ header .header-banner .contenedor div{
     }
 
     header .banner{
-        margin-top: 220px;
+        margin-top: 170px;
     }
 
    header .top-header .low .user a i {
@@ -270,6 +270,7 @@ header .header-banner .contenedor div{
         align-self: center;
         border-top: 3px solid rgba(51, 62, 72, 0.1);
         border-bottom: 3px solid rgba(51, 62, 72, 0.1);
+        padding: 5px;
 
     }
 
@@ -290,7 +291,7 @@ header .header-banner .contenedor div{
     }
 
     header .top-header .logo1 img{
-        width: 300px;
+        width: 240px;
     }
    
     
@@ -341,21 +342,27 @@ header .header-banner .contenedor div{
         header .low-header{
             display: block;
             order: 0;
-            margin-top: -25px;
-           
+            background-color: rgb(240, 240, 240);
+            margin: 0;
+            padding: 0;
+
         }
 
         header .low-header .header-banner{
             justify-content: center;
             text-align: center;
+            background-color: rgb(240, 240, 240);
+            
         }
 
         header .low-header .header-banner .contenedor{
          display: flex;
+         padding: 10px;
          justify-content: space-around;
          width: 80%;
          max-width: 1300px;
          margin: auto;
+
         }
         
     
@@ -478,8 +485,12 @@ body .productos-celu {
 }
 
 
+body .productos-celu .titulo{
+    font-weight: 600;
+}
 
-body .productos-celu  article{
+
+body .productos-celu article{
     display: flex;
     flex-direction: column;
     display: flex;
@@ -492,7 +503,21 @@ body .productos-celu  article{
     margin-bottom: 15px;
 }
 
-body .productos-celu article .titulo{
+body .productos-celu a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+body .productos a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+
+body .productos-celu article .titulo {
+    color: gray;
+    font-style: none;
+    text-decoration: none;
     font-size: 26px;
     padding: 10px;
     text-align: start;
@@ -500,21 +525,41 @@ body .productos-celu article .titulo{
     position: relative;
     border-bottom:  1px solid rgb(230,230,230);
 
+
 }
 
 body .productos-celu article .info{
     display: flex;
     flex-flow: column;
-    padding:25px;
+    padding:25px;    
+
 }
+
+body .productos-celu article .info .descripcion{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+body .productos-celu article .info .precio{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
 
 body .productos-celu article .link{
     text-decoration: none;
+    color: red;
     font-size: 16px;
     padding: 20px;
+    font-weight: 500;
     text-align: start;
     position: relative;
     border-top:  1px solid rgb(230,230,230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 body .categorias{
@@ -540,6 +585,10 @@ body .categorias .categoria{
 
 body .categorias .categoria a img{
     width: 100%;
+}
+
+body .categorias .titulo {
+    padding: 20px;
 }
 
 body .categorias .categoria h3{
@@ -599,12 +648,16 @@ body .categorias h3{
        
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         flex-wrap: wrap;
+        margin: auto;
     }
+
     
-    body .productos  article{
-        flex: 2 1 40%;
+    body .productos .carusel .articulos a {
+        
         display: flex;
+        flex: 2 1 40%;
         flex-direction: column;
         display: flex;
         flex-flow: column;
@@ -615,18 +668,30 @@ body .categorias h3{
         transition-property: box-shadow;
         transition-duration: 0.3s;
         margin: 10px;
-    
-    
+
     }
     
 
-    body .productos article .info{
+    body .productos .carusel .articulos a article .info{
         display: flex;
         flex-flow: column;
         border-top: 1px solid rgb(230,230,230);
         padding:25px;
     
     }
+
+    body .productos .carusel .articulos a article .info .precio{
+        font-size: 18px;
+        font-weight: 400;
+        order: 1;
+    }
+    body .productos .carusel .articulos a article .info .descripcion{
+        font-size: 24px;
+        font-weight: 500;
+        order: 0;
+    }
+
+
     
 }
 
@@ -682,7 +747,7 @@ body .productos .carusel .articulos{
     justify-content: space-around;
 }
 
-body .productos  article{
+body .productos  a{
     display: flex;
     flex-direction: column;
     display: flex;
@@ -929,8 +994,12 @@ body .categorias .categoria h3{
     background-color: white;
     display: flex;
     flex-direction: row;
-    margin: 0px 0px 0px 0px;
-    padding: 25px 5px 5px 5px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 50px;
+    margin-top: 50px;
+
 }
     .sectionLeft {
         background-color: white;
@@ -1103,9 +1172,10 @@ body .categorias .categoria h3{
                 color: lightslategrey;
             }
 
-/*******************************************Media Q body**********************************/
 
-@media screen and (max-width:768px)
+
+
+@media screen and (max-width:819px)
 {
 main {
     background-color: white;
@@ -1113,6 +1183,7 @@ main {
     flex-direction: column;
     padding: 20px;
     margin: 20px;
+    margin-top: 40px;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
     border-radius: 10px;
 
@@ -1293,9 +1364,117 @@ main {
         }
 }
 
-@media screen and (min-width:1242px)
+@media screen and (min-width:1241px)
 {
+    main{
+        margin-top: 180px;
+    }
+}
+
+
+
+/****************************************************************************FIN DEL MAIN***********************************************************************************/
+
+/***************************************diseño login***************************/
+body{
+    align-items: center;
+}
+
+body .login-main{
+    margin:40px 20px;
+    padding: 20px 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
 
 }
 
-/****************************************************************************FIN DEL MAIN***********************************************************************************/
+body .login-main i{
+    font-size: 120px;
+    color: darkred;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 10px;
+    border-radius: 35px;
+    z-index: 2;
+    background-color: rgb(240, 240, 240);
+}
+
+body .texto-login{
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    max-width: 430px;
+    margin-bottom: -60px;
+}
+
+body .login{
+    margin: 60px 30px;
+    padding: 30px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+
+}
+
+body .login .ingreso{
+
+    align-items: center;
+}
+
+body .login .ingreso h3{
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+body .login .ingreso form input{
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 500px;
+
+}
+
+
+
+body .login .ingreso button{
+    margin: 10px auto;
+    padding: 5px 60px;
+    max-width: 500px;
+    width: 200px;
+    text-align: center;
+
+}
+
+body .login .ingreso button a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+body .login .ingreso a{
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color:darkred;
+    text-align: center;
+    
+}
+
+
+
+
+@media screen and (min-width:1241px)
+
+{
+    body .login-main{
+        margin-top: 200px;
+    }
+}
+
+
+

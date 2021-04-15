@@ -4,28 +4,32 @@ const path = require('path');
 const app = express();
 
 
+
+
 //Config
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
 //Rutas
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.html'));
+   res.render('index');
 });
 
 app.get('/product', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/product.html'));
+    res.render('product');
 });
 
 app.get('/carrito', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/carrito.html'));
+    res.render('carrito')
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/login.html'));
+    res.render('login');
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/register.html'));
+    res.render('register');
 });
 
 
