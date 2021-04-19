@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <%- include('partials/head') %>
-
-<body>
+</head>
+<body class = "body-register">
+    <header>
     <%- include('partials/headercat') %>
+    </header>
 
-    <section class="login">
+    <section class = register>
+        <i class="fas fa-user-plus"></i>
 
-        <div class="container p-4 animation-target">
-            <div class="row">
-                <div class="col-md-4 mx-auto">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>REGISTRATE</h3>
-                        </div>
-                        <div class="card-body">
-                            <form action="/login" method="POST">
-                                <div class="form-group" style="margin: 10px;">
-                                    <input type="text" name="username" placeholder="Coloca tu Usuario" class="form-control" required>
-                                </div>
-                                <div class="form-group" style="margin: 10px;">
-                                    <input type="password" name="password" placeholder="Ingresa tu password" class="form-control">
-                                </div>
-                                <div class="form-group" style="margin: 10px;">
-                                    <input type="password" name="passwordValidacion" placeholder="Confirma tu password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-secondary">
-                                        Enviar
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        <div class = "forms">
+        <form action="" method = "POST" class = "sing-in">
+
+
+            <span>Informacion de ususario</span> 
+            <div class = "bloque2">
+                <input type = "text" class = "user" placeholder="Nombre de ususario*">
+                <input type = "email" class = "user" placeholder="Direccion de Email*">
+                <input type = "email" class = "user" placeholder="Confrima la direccion de Email*">
+                <input type = "password" class = "user" placeholder="Contraseña*">
+                <input type = "password" class = "user" placeholder="Confrima la contraseña*">
             </div>
+                
+
+
+
+        <span>Informacion personal</span>
+        <div class = "bloque1">
+            <input type = "text" class = "user" placeholder="Nombre* ">
+            <input type = "text" class = "user" placeholder="Apellido*">
+            <h6>Fecha de nacimiento</h6>
+
+            <input type = "date" class = "user">
+            <h6>Direccion</h6>
+            <input type = "text" class = "user" placeholder="ejemplo: Av. San Martin, Villa Devoto">
+            <input type = "text" class = "user" placeholder="Apellido*">
         </div>
-        
+          
+
+        <div class = "interes-usuario">
+            <h6>Categorias preferidas</h6>
+
+            <div>
+                <input type="checkbox" name="interests" value="a" id="a">
+                <label for="a">Mouintain Bike</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="b" id="b">
+                <label for="b">Sport Bike</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="c" id="c">
+                <label for="c">City Bike</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="d" id="d">
+                <label for="d">E-BIKE</label>
+            </div>
+
+            <div class = "buttons"> 
+                <a href = "../index">
+                    <button class = "login-botton">
+                        Enviar formulario
+                    </button>
+                    </a>
+
+                  
+             </div>
+
+        </div>
+
+         
+     
+
+
+
+    </form>
+        </div>
+
+   
+
 
     </section>
 
-  
+  <footer>
     <%- include('partials/footer') %>
+</footer>
+
 
 </body>
 

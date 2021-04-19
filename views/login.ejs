@@ -14,25 +14,33 @@
         ¡Ingresa a nuestro sitio para conocer beneficios exclusivos de usuarios registrados,
         conoce tu historial de compras su estado y mucho mas!
         </p>
+        <a href = "/register">Crea tu usuario gratis haciendo click aqui</a>
     </div>
 
     <i class="fas fa-users"></i>
     <div class="login">               
                         <div class = "ingreso">
                             <h3>INGRESAR</h3>
-                            <form action="/login" method="POST">
+                            <form action="/" method="POST">
                                 <div class = "dato">
                                     <input type="text" name="username" placeholder="Coloca tu Usuario" class="form-control" required>
                                 </div>
                                 <div class = "dato" >
                                     <input type="password" name="password" placeholder="Ingresa tu password" class="form-control">
                                 </div>
-                                <button>
+                                <div class="buttons">
+                                <a href = "/index">
+                                <button class = "login-botton">
                                    Ingresar
                                 </button>
-                                <button>
-                                   <a href = "/register"> Registrate</a>
+                                </a>
+
+                                <a href = "/register">
+                                <button class = login-botton>
+                                    Olivde mi contraseña
                                 </button>
+                                </a>
+                            </div>
                                 
                                
                             </form>

@@ -2,20 +2,31 @@ const express = require('express');
 const color = require('colors');
 const path = require('path');
 const app = express();
-
-
-
-
-//Config
 app.use(express.static('public'));
+
+
+
+
+
+//Los gerentes de ruteo
+const indexRouter = require('./routes/indexRouter');
+const productRouter = require('./routes/productosRouter');
+const userRouter = require('./routes/userRouter');
+//Config de engine y sistema de ruteo
 
 app.set('view engine', 'ejs');
 
-//Rutas
-app.get('/', (req, res) => {
-   res.render('index');
-});
 
+
+//llamado a rutas
+app.use('/' , indexRouter);
+app.use('/product' , productRouter);
+app.use('/login' , userRouter);
+
+
+
+//Rutas
+/*
 app.get('/product', (req, res) => {
     res.render('product');
 });
@@ -31,6 +42,8 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register');
 });
+
+*/
 
 
 //Levantamos servidor y por si nos dan un puerto
