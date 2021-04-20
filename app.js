@@ -10,8 +10,8 @@ app.use(express.static('public'));
 
 //Los gerentes de ruteo
 const indexRouter = require('./routes/indexRouter');
-const productRouter = require('./routes/productosRouter');
-const userRouter = require('./routes/userRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
 //Config de engine y sistema de ruteo
 
 app.set('view engine', 'ejs');
@@ -20,30 +20,10 @@ app.set('view engine', 'ejs');
 
 //llamado a rutas
 app.use('/' , indexRouter);
-app.use('/product' , productRouter);
-app.use('/login' , userRouter);
+app.use('/products' , productsRouter);
+app.use('/users' , usersRouter);
 
 
-
-//Rutas
-/*
-app.get('/product', (req, res) => {
-    res.render('product');
-});
-
-app.get('/carrito', (req, res) => {
-    res.render('carrito')
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
-app.get('/register', (req, res) => {
-    res.render('register');
-});
-
-*/
 
 
 //Levantamos servidor y por si nos dan un puerto
