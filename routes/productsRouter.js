@@ -6,6 +6,7 @@ let router = express.Router();
 
 router.get('/product' , productsController.product);
 router.get('/carrito', productsController.carrito);
+router.get('/crear' , productsController.crear);
 
 
 
