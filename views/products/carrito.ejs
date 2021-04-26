@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
-<body>
-    <%- include('../partials/headercat') %>
+    <body>
+        <%- include('../partials/headercat') %>
 
-    <section class = "carrito">
-        <h1>Caritto</h1>
-    </section>
+            <section class="carrito">
+                <div class="contenedor-productos">
+                    <div class="producto-carrito">
+                        <img src="../image/Bikes/Ebikes/cube.jpg" width="100%">
+                        <div class="descripcion-producto">
+                            <div class="detalle-producto">
+                                <span>E-Bike Cube</span>
+                                <spam>165.459$</spam>
+                                <span>X2</span>
+                            </div>
+                            <a href="../products/product">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <div class="producto-carrito">
+                        <img src="../image/Bikes/Ebikes/cube.jpg" width="100%">
+                        <div class="descripcion-producto">
+                            <div class="detalle-producto">
+                                <span>E-Bike Cube</span>
+                                <spam>165.459$</spam>
+                                <span>X2</span>
+                            </div>
+                            <a href="../products/product">Ver producto</a>
+                        </div>
+
+                    </div>
 
 
-    <br>
-    <br>
-    <br>
-    <%- include('../partials/footer') %>
+                    <div class="producto-carrito">
+                        <img src="../image/Bikes/Ebikes/cube.jpg" width="100%">
+                        <div class="descripcion-producto">
+                            <div class="detalle-producto">
+                                <span>E-Bike Cube</span>
+                                <spam>165.459$</spam>
+                                <span>X2</span>
+                            </div>
+                            <a href="../products/product">Ver producto</a>
+                        </div>
 
-    
+                    </div>
 
-    
+                </div>
 
-</body>
+                <div class="banner-carrito">
+
+                    <span>No te quedes sin el producto del dia</span>
+                </div>
+
+
+                <div class="check-out">
+                    <h3>Total: xxx.xxx</h3>
+                    <button type="submit">Pagar</button>
+                </div>
+            </section>
+
+
+
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>

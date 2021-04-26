@@ -2,94 +2,59 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head') %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/Logos/Logophone.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/estilosLogin.css">
+    <title>JBike</title>
+
 </head>
-<body class = "body-register">
-    <header>
-    <%- include('../partials/headercat') %>
-    </header>
 
-    <section class = register>
-        <i class="fas fa-user-plus"></i>
-
-        <div class = "forms">
-        <form action="" method = "POST" class = "sing-in">
-
-
-            <span>Informacion de ususario</span> 
-            <div class = "bloque2">
-                <input type = "text" class = "user" placeholder="Nombre de ususario*">
-                <input type = "email" class = "user" placeholder="Direccion de Email*">
-                <input type = "email" class = "user" placeholder="Confrima la direccion de Email*">
-                <input type = "password" class = "user" placeholder="Contraseña*">
-                <input type = "password" class = "user" placeholder="Confrima la contraseña*">
-            </div>
-                
-
-
-
-        <span>Informacion personal</span>
-        <div class = "bloque1">
-            <input type = "text" class = "user" placeholder="Nombre* ">
-            <input type = "text" class = "user" placeholder="Apellido*">
-            <h6>Fecha de nacimiento</h6>
-
-            <input type = "date" class = "user">
-            <h6>Direccion</h6>
-            <input type = "text" class = "user" placeholder="ejemplo: Av. San Martin, Villa Devoto">
-            <input type = "text" class = "user" placeholder="Apellido*">
+<body>
+    <div class="container-login">
+        <div class="background-login">
+            <img src = "../image/login/registerimage3.jpeg" width="100%" height = "100%" >
         </div>
-          
+        <div class="form-login">
+            <div class="form-container">
 
-        <div class = "interes-usuario">
-            <h6>Categorias preferidas</h6>
-
-            <div>
-                <input type="checkbox" name="interests" value="a" id="a">
-                <label for="a">Mouintain Bike</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="b" id="b">
-                <label for="b">Sport Bike</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="c" id="c">
-                <label for="c">City Bike</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="d" id="d">
-                <label for="d">E-BIKE</label>
-            </div>
-
-            <div class = "buttons"> 
-                <a href = "../index">
-                    <button class = "login-botton">
-                        Enviar formulario
-                    </button>
-                    </a>
-
-                  
-             </div>
-
+            
+                <a href="/">
+                    <img src="../image/Logos/Logophone.png" width = 130px>
+                </a>
+                <div class="ingreso">
+    
+                    <h3>Crear una cuenta</h3>
+                    <form action="/" method="POST">
+                            <input type="text" name="username" placeholder="Nombre" class="form-control"
+                                required>
+                                <input type="text" name="username" placeholder="Apellido" class="form-control"
+                                required>
+                                <input type="text" name="username" placeholder="Correo electronico" class="form-control"
+                                required>
+                            <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                            
+                        <div class="buttons">
+                            <a href="/index">
+                                <button class="login-botton">
+                                    Ingresar
+                                </button>
+                            </a>
+                            
+                        </div>
+                        Ya tenes una cuenta? <a href="/users/login">Ingresa aca</a>
+    
+                    </form>
+                </div>
         </div>
-
-         
-     
-
-
-
-    </form>
-        </div>
-
-   
-
-
-    </section>
-
-  <footer>
-    <%- include('../partials/footer') %>
-</footer>
-
+    </div>
+    </div>
 
 </body>
 
